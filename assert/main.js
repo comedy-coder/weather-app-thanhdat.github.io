@@ -30,8 +30,8 @@ searchInput.addEventListener('change',(e) =>
             weatherIcon.setAttribute('src', `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
             temperature.innerHTML = Math.round(data.main.temp) || DEFAULT_VALUE;
 
+            
             sunrise.innerHTML = moment.unix(data.sys.sunrise).format('H:mm') || DEFAULT_VALUE;
-         
             sunset.innerHTML = moment.unix(data.sys.sunset).format('H:mm') || DEFAULT_VALUE;
             humidity.innerHTML = data.main.humidity || DEFAULT_VALUE;
             windSpeed.innerHTML = (data.wind.speed * 3.6).toFixed(2) || DEFAULT_VALUE;
